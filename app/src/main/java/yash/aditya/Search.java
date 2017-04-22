@@ -68,7 +68,7 @@ public class Search extends AppCompatActivity {
             HttpClient httpclient = new DefaultHttpClient();
 
             // 2. make POST request to the given URL
-            HttpPost httpPost = new HttpPost("http://192.168.43.58:5000/yash");
+            HttpPost httpPost = new HttpPost("http://192.168.43.58:5000/yash");//http://kickbuttowski.pythonanywhere.com/yash
 
             String json = "";
 
@@ -137,11 +137,9 @@ public class Search extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
           //  make_UI_changes(var);
-            Toast.makeText(getBaseContext(), var, Toast.LENGTH_LONG).show();
+         //   Toast.makeText(getBaseContext(), var, Toast.LENGTH_LONG).show();
 //
-            Intent i=new Intent(Search.this,FinalFeed.class);
-            i.putExtra("yo",var);
-            startActivity(i);
+
         }
     }
 

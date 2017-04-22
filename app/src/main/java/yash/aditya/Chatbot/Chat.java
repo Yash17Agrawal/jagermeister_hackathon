@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.InputFilter;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
@@ -30,6 +32,8 @@ import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 import com.google.firebase.appindexing.Action;
 import com.google.firebase.appindexing.FirebaseAppIndex;
 import com.google.firebase.appindexing.FirebaseUserActions;
@@ -68,7 +72,7 @@ public class Chat extends AppCompatActivity implements GoogleApiClient.OnConnect
     private Button mSendButton;
 
     //private FirebaseRemoteConfig mFirebaseRemoteConfig;
-
+    private String m_Text = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,30 +81,48 @@ public class Chat extends AppCompatActivity implements GoogleApiClient.OnConnect
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String phone=mSharedPreferences.getString("USER_PHONE_NUMBER","Default");
+        /*String phone=mSharedPreferences.getString("USER_PHONE_NUMBER","Default");
         if(phone.equals("Default"))
         {
-            new AlertDialog.Builder(getApplicationContext())
-                    .setTitle("User Info")
-                    .setMessage("Please enter your phone number")
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            // continue with delete
-                            
-                        }
-                    })
-                    /*.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            // do nothing
-                        }
-                    })*/
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .show();
-        }
+           final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("User Info");
 
+            // Set up the input
+            final EditText input = new EditText(this);
+            // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            builder.setView(input);
+
+            // Set up the buttons
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                    m_Text = input.getText().toString();
+                    if (m_Text.isEmpty()) {
+                    Toast.makeText(getApplicationContext(),"Number is compulsory",Toast.LENGTH_LONG).show();
+                        builder.show();
+                    } else {
+                        SharedPreferences.Editor ed = mSharedPreferences.edit();
+                        ed.putString("USER_PHONE_NUMBER", m_Text);
+                        ed.commit();
+                    }
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+
+            builder.show();
+        }
+*/
         // Set default username is anonymous.
         ANONYMOUS=mSharedPreferences.getString("USER_DISPLAY_NAME","Default");
-        mUsername = ANONYMOUS;
+        m_Text="";
+        mUsername = ANONYMOUS+"\n"+m_Text;
 
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -295,7 +317,30 @@ public class Chat extends AppCompatActivity implements GoogleApiClient.OnConnect
             case R.id.invite_menu:
                 Log.e("yash2","here");
                 sendInvitation();
+            case R.id.logout:
+                SharedPreferences yash= PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
+                /*mAuth.signOut();
+                Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
+                        new ResultCallback<Status>() {
+                            @Override
+                            public void onResult(@NonNull Status status) {
+                                // updateUI(null);
+
+                                Intent i = new Intent(getApplicationContext(), SignInActivity.class);
+                                SharedPreferences yash = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                                SharedPreferences.Editor ed = yash.edit();
+                                ed.putBoolean("signedin", false);
+                                ed.putString("ID", "");
+                                ed.putString("USER_DISPLAY_NAME", "");
+                                ed.putString("USERNAME", "");
+                                ed.putString("mode", null);
+                                ed.commit();
+                                startActivity(i);
+                                finish();
+                            }
+                        });
+                    break;*/
             default:
                 return super.onOptionsItemSelected(item);
         }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="1dp"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingTop="1dp"
+    tools:context="com.example.mayank.cvtest.MainActivity"
+    android:id="@+id/fram">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bg"
+        android:src="@drawable/bg"
+        android:layout_gravity="fill_vertical"
+        android:scaleType="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:layout_width="268dp"
+        android:layout_height="202dp"
+        android:text="Dr. BOT"
+        android:id="@+id/name"
+        android:paddingRight="20dp"
+        android:paddingBottom="50dp"
+
+        android:layout_gravity="right|bottom"
+        android:textColor="#fffefe"
+        android:textSize="60dp"
+        android:textAlignment="center"
+        android:paddingStart="40dp" />
+    <TextView
+        android:layout_width="227dp"
+        android:layout_height="124dp"
+        android:text="Delivering you not just Medicine !"
+        android:id="@+id/caption"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+
+        android:layout_gravity="right|bottom"
+        android:textColor="#fffefe"
+        android:textSize="20dp"
+
+        android:paddingStart="10dp" />
+
+</FrameLayout>

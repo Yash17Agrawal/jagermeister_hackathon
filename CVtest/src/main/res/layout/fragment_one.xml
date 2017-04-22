@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.mayank.cvtest.fourthpage">
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID1"
+        android:layout_width="200dp"
+        android:layout_height="460dp"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/url_data1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="asjdbahsda"
+            android:layout_weight="1.0"
+            android:textSize="15sp"
+            android:textColor="#000000" />
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -16,9 +16,11 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 
+import yash.aditya.Chatbot.Chat;
+
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout something_new;
+    LinearLayout something_new,chat_chat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +30,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
         something_new=(LinearLayout)findViewById(R.id.something_new);
-
+        chat_chat=(LinearLayout)findViewById(R.id.chat_chat);
         try {
             Glide.with(this).load(R.drawable.profile_cover).into((ImageView) findViewById(R.id.backdrop));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-
+        chat_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =new Intent(MainActivity.this, Chat.class);
+                startActivity(i);
+            }
+        });
 
     }
 
@@ -45,5 +53,6 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent i=new Intent(MainActivity.this,Search.class);
         startActivity(i);
+
     }
 }

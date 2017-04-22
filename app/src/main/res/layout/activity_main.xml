@@ -93,6 +93,7 @@
             android:layout_height="wrap_content"
             android:background="#26ae90"
             android:layout_margin="20dp"
+            android:id="@+id/chat_chat"
             android:orientation="horizontal">
 
             <ImageView

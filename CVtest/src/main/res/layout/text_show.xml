@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.CoordinatorLayout
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="585dp"
+        android:fitsSystemWindows="true"
+        tools:context="com.example.mayank.cvtest.thirdpage"
+        android:background="#ffffff">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_gravity="top|right"
+            android:visibility="invisible"
+            app:elevation="10dp"
+            app:pressedTranslationZ="12dp"
+            android:src="@drawable/speech"
+            app:fabSize="normal" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab22"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="top|right"
+
+            android:visibility="invisible"
+            app:elevation="10dp"
+            app:pressedTranslationZ="12dp"
+            android:src="@drawable/search"
+            app:fabSize="normal" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+
+            app:elevation="10dp"
+            app:backgroundTint="@color/colorAccent"
+            app:pressedTranslationZ="12dp"
+
+            android:src="@drawable/flo"
+
+            app:fabSize="normal" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="200dp"
+        android:layout_height="460dp"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/TEXT_STATUS_ID"
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:text="asjdbahsda"
+            android:layout_weight="1.0"
+            android:textSize="15sp"
+            android:textColor="#000000" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"/>
+
+
+
+</RelativeLayout>

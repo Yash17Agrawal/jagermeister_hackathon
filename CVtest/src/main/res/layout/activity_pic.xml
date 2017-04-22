@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.CoordinatorLayout
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="585dp"
+        android:fitsSystemWindows="true"
+        tools:context="com.example.mayank.cvtest.secpage"
+        android:background="#ffffff">
+
+
+
+        <ImageView
+            android:layout_width="310dp"
+            android:layout_height="400dp"
+            android:id="@+id/ig"
+            android:layout_gravity="center_vertical"
+            android:background="#262626" />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_gravity="top|right"
+            android:visibility="invisible"
+            app:elevation="10dp"
+            app:pressedTranslationZ="5dp"
+            android:src="@drawable/file"
+
+            app:fabSize="normal" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="top|right"
+
+            android:visibility="invisible"
+            app:elevation="10dp"
+            app:pressedTranslationZ="12dp"
+            android:src="@drawable/cam"
+            app:fabSize="normal" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+
+            app:elevation="10dp"
+            app:backgroundTint="@color/colorAccent"
+            app:pressedTranslationZ="12dp"
+
+            android:src="@drawable/flo"
+
+            app:fabSize="normal" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hideshow"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textOn="BACK"
+        android:textOff="OCR"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="310dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/prog"
+        android:layout_above="@+id/hideshow"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="105dp"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="PROCESSING THE UPLOADED IMAGE..."
+            android:id="@+id/after"
+            android:layout_gravity="center"
+            android:elevation="30dp"
+            android:fontFamily="Comic Sans MS"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textColorHighlight="#d6ebb0"
+            android:textSize="26sp"
+            android:background="#ed0924" />
+    </LinearLayout>
+
+
+</RelativeLayout>
