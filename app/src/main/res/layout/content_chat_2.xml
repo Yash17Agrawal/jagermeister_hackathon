@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#3b5998"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="160dp"
+        app:mtf_image="@drawable/invite"
+        android:layout_marginLeft="20dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:hint="What do you want to study about?"
+            android:layout_gravity="center"
+            android:id="@+id/search_q"
+            android:textColor="#333"
+            android:textColorHint="#666"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#009939"
+        android:textColor="#ffffff"
+        android:layout_marginTop="280dp"
+        android:text="SEARCH"
+        android:id="@+id/search_btn"
+        android:onClick="search_clicked"
+        />
+
+
+</RelativeLayout>

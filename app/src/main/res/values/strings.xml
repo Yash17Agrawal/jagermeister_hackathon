@@ -15,4 +15,10 @@
     <string name="name">Fullname</string>
 
 
+    <string name="invite_menu_label">Invite</string>
+    <string name="invitation_message">Please join me for a friendly chat</string>
+    <string name="invitation_cta">Call to action</string>
+    <string name="invitation_title">Friendly Chat Invite</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "152825695614",
+    "firebase_url": "https://aditya-a9c72.firebaseio.com",
+    "project_id": "aditya-a9c72",
+    "storage_bucket": "aditya-a9c72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152825695614:android:a930482239dc9fcb",
+        "android_client_info": {
+          "package_name": "yash.aditya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152825695614-htj8ut6b3k91eh90d8tgm52m9otqser4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "yash.aditya",
+            "certificate_hash": "0b559d735a0ecb30d8d00874b44fc24e88df9080"
+          }
+        },
+        {
+          "client_id": "152825695614-5lu9uh84rs07mh7ue8eluq1ioukl5rtt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2oOJCXfIlYgZ-Fvbr4gOnWiH8HKjoJLY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "152825695614-5lu9uh84rs07mh7ue8eluq1ioukl5rtt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
