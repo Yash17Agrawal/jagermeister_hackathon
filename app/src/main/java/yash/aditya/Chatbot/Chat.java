@@ -1,5 +1,7 @@
 package yash.aditya.Chatbot;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -75,9 +77,31 @@ public class Chat extends AppCompatActivity implements GoogleApiClient.OnConnect
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String phone=mSharedPreferences.getString("USER_PHONE_NUMBER","Default");
+        if(phone.equals("Default"))
+        {
+            new AlertDialog.Builder(getApplicationContext())
+                    .setTitle("User Info")
+                    .setMessage("Please enter your phone number")
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // continue with delete
+                            
+                        }
+                    })
+                    /*.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // do nothing
+                        }
+                    })*/
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        }
+
         // Set default username is anonymous.
         ANONYMOUS=mSharedPreferences.getString("USER_DISPLAY_NAME","Default");
         mUsername = ANONYMOUS;
+
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)

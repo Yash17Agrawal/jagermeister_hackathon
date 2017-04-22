@@ -28,4 +28,23 @@
     <color name="colorAccent">#FF4081</color>
     <color name="viewBg">#f1f5f8</color>
     <color name="album_title">#4c4c4c</color>
+    <color name="black">#212121</color>
+
+    <color name="login_background">#058472</color>
+    <color name="login_btn">#4B77BE</color>
+    <color name="grey">#939393</color>
+    <color name="light_grey">#D3D3D3</color>
+    <color name="grey_light">#e6e6e6</color>
+    <color name="report_green">#57af38</color>
+    <color name="orange">#eb661c</color>
+    <color name="pink">#d49dc6</color>
+    <color name="blue_grey_500">#607D8B</color>
+    <color name="blue_grey_600">#546E7A</color>
+    <color name="blue_grey_700">#455A64</color>
+    <color name="blue_grey_800">#37474F</color>
+    <color name="blue_grey_900">#263238</color>
+
+
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
 </resources>
