@@ -54,7 +54,7 @@ public class Chat extends AppCompatActivity implements GoogleApiClient.OnConnect
     public static final int DEFAULT_MSG_LENGTH_LIMIT = 5555;
     public static String ANONYMOUS = "anonymous";
     private static final String MESSAGE_SENT_EVENT = "message_sent";
-    private static final String MESSAGE_URL = "https://project-8595007784560850723.firebaseio.com/messages";
+    private static final String MESSAGE_URL = "https://aditya-a9c72.firebaseio.com/messages";
     private String mUsername;
     private String mPhotoUrl;
     private SharedPreferences mSharedPreferences;
